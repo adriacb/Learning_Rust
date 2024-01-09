@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     /*let x: u8 = 255;    // 0 - 255
     let y: i8 = 10;     // -128 - 127
@@ -41,6 +43,18 @@ fn main() {
     let x = 127_000 as i64;   
     let y = 10_i32;     
     let z = x / (y as i64);      
-    println!("{}", z);            
+    println!("{}", z);         
 
+    let x = (i32::MAX as i64) + 1;
+    let y = 10_i32;     
+    let z = (x as i32) / y;      // WE HAVE AN OVERFLOW EVEN GETTING A NEGATIVE VALUE IT IS NOT CATCHED BY THE COMPILER
+    println!("{}", z);   
+            
+    let mut input = String::new();
+
+    io::stdin().read_line(&mut input).expect("NOT CORRECT");
+
+    let int_input: i64 = input.trim().parse().unwrap(); // trim removes the "\n" and them parse
+
+    println!("OUTPUT: {}", int_input + 2); 
 }
