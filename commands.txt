@@ -1,0 +1,8 @@
+cargo build             // compiles the code
+cargo new <project>     // creates a dir and project
+cargo run               // runs the main
+cargo check             // check code errors before compiling
+
+
+rustc main.rs           // compiles
+rustfmt main.rs         // formats the code
